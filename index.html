@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Nebula Access</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="stars"></div>
+        <main class="card">
+            <div class="orbit">✦</div>
+            <p class="eyebrow">ESTACIÓN DE ACCESO · SECTOR 09</p>
+            <h1>NEBULA <span>ACCESS</span></h1>
+            <p class="subtitle">Autentica tu identidad para continuar tu viaje.</p>
+            <form id="loginForm"><label for="usuario">IDENTIFICADOR DE TRIPULANTE</label><input id="usuario"
+                    autocomplete="username" placeholder="Ingresa tu usuario" required><label for="contrasena">CÓDIGO DE
+                    ACCESO</label><input id="contrasena" type="password" autocomplete="current-password"
+                    placeholder="Ingresa tu contraseña" required><button type="submit">INICIAR MISIÓN
+                    <span>↗</span></button>
+                <p id="mensaje" role="status" aria-live="polite"></p>
+            </form>
+            <div class="footer">✧ SISTEMA DE AUTENTICACIÓN · V 1.0 ✧</div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>

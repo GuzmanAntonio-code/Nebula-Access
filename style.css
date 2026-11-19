@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    color: #f4f3ff;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(ellipse at 75% 18%, #49227388, transparent 38%), radial-gradient(ellipse at 20% 85%, #164c8088, transparent 40%), #07091b;
+    overflow-x: hidden
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(1px 1px at 10% 20%, #fff 99%, transparent), radial-gradient(2px 2px at 75% 40%, #fff 99%, transparent), radial-gradient(1px 1px at 40% 80%, #fff 99%, transparent), radial-gradient(1px 1px at 90% 75%, #fff 99%, transparent);
+    background-size: 170px 190px;
+    opacity: .6
+}
+
+.card {
+    position: relative;
+    width: min(100%, 440px);
+    padding: 40px 38px;
+    border: 1px solid #8d79c755;
+    border-radius: 24px;
+    background: #11142bd9;
+    box-shadow: 0 20px 90px #0008, 0 0 65px #6948db20;
+    backdrop-filter: blur(18px)
+}
+
+.orbit {
+    margin: auto auto 18px;
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    color: #cdbbff;
+    border: 1px solid #9879f4;
+    border-radius: 50%;
+    box-shadow: 0 0 35px #8158eb55
+}
+
+.eyebrow {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2.4px;
+    color: #b3a6df
+}
+
+h1 {
+    text-align: center;
+    margin: 14px 0 8px;
+    font-size: 30px;
+    letter-spacing: 2px
+}
+
+h1 span {
+    color: #aa8dff
+}
+
+.subtitle {
+    text-align: center;
+    color: #a7a8c7;
+    font-size: 13px;
+    margin-bottom: 35px
+}
+
+label {
+    display: block;
+    color: #b6b8d5;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin: 20px 0 10px
+}
+
+input {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid #4d4b78;
+    border-radius: 10px;
+    background: #090e24;
+    color: white;
+    font-size: 14px;
+    outline: none
+}
+
+input:focus {
+    border-color: #ac90ff;
+    box-shadow: 0 0 0 3px #9a75ed25
+}
+
+input::placeholder {
+    color: #737792
+}
+
+button {
+    margin-top: 28px;
+    width: 100%;
+    padding: 16px 20px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(110deg, #7960e8, #a065e8);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    cursor: pointer;
+    box-shadow: 0 8px 30px #885bdf44
+}
+
+button:hover {
+    filter: brightness(1.13)
+}
+
+button span {
+    float: right;
+    font-size: 17px
+}
+
+#mensaje {
+    text-align: center;
+    min-height: 20px;
+    font-size: 13px;
+    margin: 18px 0 0
+}
+
+.footer {
+    text-align: center;
+    color: #777b9d;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    margin-top: 25px
+}
+
+@media(max-width:480px) {
+    .card {
+        padding: 30px 22px
+    }
+
+    h1 {
+        font-size: 25px
+    }
+}
