@@ -218,3 +218,33 @@ button span {
         font-size: 25px;
     }
 }
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    padding-right: 85px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: auto;
+    margin: 0;
+    padding: 8px;
+    background: transparent;
+    color: #cdbbff;
+    box-shadow: none;
+    font-size: 11px;
+    letter-spacing: 0;
+}
+
+.toggle-password:hover {
+    transform: translateY(-50%);
+    background: #292044;
+    filter: brightness(1.2);
+}
