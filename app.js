@@ -1,4 +1,4 @@
-const VERSION_APP = "2.0.0";
+const VERSION_APP = "2.1.0";
 
 // Credenciales de prueba del sistema
 const USUARIO_VALIDO = "Antonio23110009";
@@ -17,6 +17,9 @@ const mensaje = document.getElementById("mensaje");
 // Botones de navegación
 const btnAcceder = document.getElementById("btnAcceder");
 const btnRegresar = document.getElementById("btnRegresar");
+
+// Botón para mostrar u ocultar la contraseña
+const btnMostrarContrasena = document.getElementById("btnMostrarContrasena");
 
 // Muestra la pantalla de autenticación
 function mostrarLogin() {
@@ -39,6 +42,14 @@ function limpiarFormulario() {
     formulario.reset();
     mensaje.textContent = "";
     mensaje.className = "";
+
+    campoContrasena.type = "password";
+    btnMostrarContrasena.textContent = "Mostrar";
+    btnMostrarContrasena.setAttribute(
+        "aria-label",
+        "Mostrar contraseña"
+    );
+    btnMostrarContrasena.setAttribute("aria-pressed", "false");
 }
 
 // Comprueba las credenciales ingresadas
@@ -78,3 +89,25 @@ formulario.addEventListener("submit", function(evento) {
 
 // Registra la versión actual en la consola
 console.log("Nebula Access - Versión " + VERSION_APP);
+
+// Alterna la visibilidad de la contraseña
+btnMostrarContrasena.addEventListener("click", function() {
+
+    const estaOculta = campoContrasena.type === "password";
+
+    campoContrasena.type = estaOculta ? "text" : "password";
+
+    btnMostrarContrasena.textContent = estaOculta
+        ? "Ocultar"
+        : "Mostrar";
+
+    btnMostrarContrasena.setAttribute(
+        "aria-label",
+        estaOculta ? "Ocultar contraseña" : "Mostrar contraseña"
+    );
+
+    btnMostrarContrasena.setAttribute(
+        "aria-pressed",
+        String(estaOculta)
+    );
+});
