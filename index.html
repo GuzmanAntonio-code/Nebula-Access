@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nebula Access 2.0</title>
+
+    <title>Nebula Access 2.1.0</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div class="stars"></div>
 
     <main class="card">
 
-        <!-- Pantalla de bienvenida -->
+        <!-- PANTALLA DE BIENVENIDA -->
         <section id="pantallaInicio">
+
             <div class="orbit">✦</div>
 
-            <p class="eyebrow">ESTACIÓN ESPACIAL · SECTOR 09</p>
+            <p class="eyebrow">
+                ESTACIÓN ESPACIAL · SECTOR 09
+            </p>
 
-            <h1>NEBULA <span>ACCESS</span></h1>
+            <h1>
+                NEBULA <span>ACCESS</span>
+            </h1>
 
             <p class="subtitle">
                 Sistema central de identificación de tripulantes.
             </p>
 
             <div class="welcome-message">
+
                 <h2>Bienvenido, viajero</h2>
+
                 <p>
                     Para continuar tu misión, deberás autenticar
                     tu identidad en el sistema central.
                 </p>
+
             </div>
 
             <button id="btnAcceder" type="button">
@@ -36,15 +49,20 @@
             </button>
 
             <div class="footer">
-                SISTEMA DE AUTENTICACIÓN · V 2.0.0
+                SISTEMA DE AUTENTICACIÓN · V 2.1.0
             </div>
+
         </section>
 
-        <!-- Pantalla de autenticación -->
+
+        <!-- PANTALLA DE AUTENTICACIÓN -->
         <section id="pantallaLogin" hidden>
+
             <div class="orbit">✦</div>
 
-            <p class="eyebrow">CONTROL DE IDENTIDAD · SECTOR 09</p>
+            <p class="eyebrow">
+                CONTROL DE IDENTIDAD · SECTOR 09
+            </p>
 
             <h1>IDENTIFICACIÓN</h1>
 
@@ -53,6 +71,8 @@
             </p>
 
             <form id="loginForm">
+
+                <!-- CAMPO DE USUARIO -->
                 <label for="usuario">
                     IDENTIFICADOR DE TRIPULANTE
                 </label>
@@ -65,36 +85,67 @@
                     required
                 >
 
+
+                <!-- CAMPO DE CONTRASEÑA -->
                 <label for="contrasena">
                     CÓDIGO DE ACCESO
                 </label>
 
-                <input
-                    id="contrasena"
-                    type="password"
-                    autocomplete="current-password"
-                    placeholder="Ingresa tu contraseña"
-                    required
-                >
+                <div class="password-container">
 
+                    <input
+                        id="contrasena"
+                        type="password"
+                        autocomplete="current-password"
+                        placeholder="Ingresa tu contraseña"
+                        required
+                    >
+
+                    <button
+                        id="btnMostrarContrasena"
+                        class="toggle-password"
+                        type="button"
+                        aria-label="Mostrar contraseña"
+                        aria-pressed="false"
+                    >
+                        Mostrar
+                    </button>
+
+                </div>
+
+
+                <!-- BOTÓN DE AUTENTICACIÓN -->
                 <button type="submit">
                     INICIAR MISIÓN <span>↗</span>
                 </button>
 
+                <!-- MENSAJE DE RESPUESTA -->
                 <p id="mensaje" role="status" aria-live="polite"></p>
+
             </form>
 
-            <button id="btnRegresar" class="secondary-button" type="button">
+
+            <!-- BOTÓN PARA REGRESAR -->
+            <button
+                id="btnRegresar"
+                class="secondary-button"
+                type="button"
+            >
                 ← REGRESAR AL INICIO
             </button>
 
             <div class="footer">
-                SISTEMA DE AUTENTICACIÓN · V 2.0.0
+                SISTEMA DE AUTENTICACIÓN · V 2.1.0
             </div>
+
         </section>
 
     </main>
 
+
+    <!-- ARCHIVO JAVASCRIPT -->
     <script src="app.js"></script>
+
 </body>
+
 </html>
