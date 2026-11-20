@@ -51,3 +51,17 @@ se documentan en este archivo.
 
 ### Changed
 - Se actualizó la versión de la aplicación a 2.1.1.
+
+
+## [2.1.2] - 2026-11-20
+
+### Fixed
+- Se corrigió el comportamiento del formulario después de una autenticación exitosa.
+- Se implementó la limpieza automática del usuario y la contraseña después de conceder el acceso.
+- Se restableció automáticamente la visibilidad de la contraseña al finalizar una autenticación exitosa.
+
+### Security
+- Se redujo la exposición accidental de las credenciales en el formulario después de completar el inicio de sesión.
+
+### Changed
+- Se actualizó la versión de la aplicación a 2.1.2.
