@@ -11,7 +11,7 @@ se documentan en este archivo.
 - Formulario de inicio de sesion.
 - Estructura HTML, CSS y JavaScript.
 
-  
+
 ## [2.0.0] - 2026-11-19
 
 ### Added
@@ -30,3 +30,24 @@ se documentan en este archivo.
 ### Removed
 - Se eliminó el acceso directo al formulario como única pantalla de la aplicación.
 
+
+## [2.1.0] - 2026-11-19
+
+### Added
+- Se incorpora una función para mostrar u ocultar la contraseña.
+- Se agrega un botón interactivo en el campo de contraseña.
+- Se añaden atributos de accesibilidad para identificar el estado del botón.
+
+### Changed
+- Se actualiza la versión de la aplicación a 2.1.0.
+- Se adapta el diseño del campo de contraseña para integrar el nuevo control.
+
+
+## [2.1.1] - 2026-11-20
+
+### Fixed
+- Se corrigió la validación del nombre de usuario cuando contiene espacios accidentales al principio o al final.
+- Se implementó el método trim() para normalizar el identificador antes de compararlo con las credenciales registradas.
+
+### Changed
+- Se actualizó la versión de la aplicación a 2.1.1.
