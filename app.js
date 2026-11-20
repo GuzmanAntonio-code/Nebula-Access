@@ -1,4 +1,4 @@
-const VERSION_APP = "2.1.0";
+const VERSION_APP = "2.1.1";
 
 // Credenciales de prueba del sistema
 const USUARIO_VALIDO = "Antonio23110009";
@@ -52,11 +52,17 @@ function limpiarFormulario() {
     btnMostrarContrasena.setAttribute("aria-pressed", "false");
 }
 
-// Comprueba las credenciales ingresadas
+
+// Comprueba las credenciales y elimina espacios
+// accidentales al principio y al final del usuario.
 function validarCredenciales(usuario, contrasena) {
-    return usuario === USUARIO_VALIDO &&
+
+    const usuarioLimpio = usuario.trim();
+
+    return usuarioLimpio === USUARIO_VALIDO &&
            contrasena === CONTRASENA_VALIDA;
 }
+
 
 // Eventos de navegación
 btnAcceder.addEventListener("click", mostrarLogin);
