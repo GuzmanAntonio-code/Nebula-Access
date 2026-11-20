@@ -1,4 +1,4 @@
-const VERSION_APP = "2.1.1";
+const VERSION_APP = "2.1.2";
 
 // Credenciales de prueba del sistema
 const USUARIO_VALIDO = "Antonio23110009";
@@ -81,17 +81,41 @@ formulario.addEventListener("submit", function(evento) {
     );
 
     if (accesoPermitido) {
+
         mensaje.textContent =
             "✦ Acceso concedido. ¡Bienvenido a bordo!";
 
         mensaje.className = "success";
+
+        // HOTFIX 2.1.2:
+        // Limpia las credenciales después del acceso exitoso.
+        campoUsuario.value = "";
+        campoContrasena.value = "";
+
+        // Restablece la visibilidad de la contraseña.
+        campoContrasena.type = "password";
+
+        btnMostrarContrasena.textContent = "Mostrar";
+
+        btnMostrarContrasena.setAttribute(
+            "aria-label",
+            "Mostrar contraseña"
+        );
+
+        btnMostrarContrasena.setAttribute(
+            "aria-pressed",
+            "false"
+        );
+
     } else {
+
         mensaje.textContent =
             "✕ Credenciales incorrectas. Intenta nuevamente.";
 
         mensaje.className = "error";
     }
 });
+
 
 // Registra la versión actual en la consola
 console.log("Nebula Access - Versión " + VERSION_APP);
